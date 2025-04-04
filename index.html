@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Heartfelt Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Invitation.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Love Letter Section -->
+        <div class="letter-card" id="love-letter">
+            <h1 class="letter-title">A Love Letter Just for You</h1>
+            <p class="letter-body">
+                My Dearest, <br><br>
+                From the moment we fell in love with each other, you have been the brightest part of my world. You have brought so much joy, warmth, and love into my life. Every time I look into your eyes, I feel at peace, knowing that I have found someone so wonderful. <br><br>
+                Your beauty, your kindness, and the way you light up the room – it all fills me with admiration and love. You are my heart’s desire, and with every passing day, I fall more deeply in love with you. <br><br>
+                I cherish every moment spent with you, and I can’t wait to see what the future holds for us. <br><br>
+                With all my love, <br>
+                [Your sweetest man 😊]
+            </p>
+            
+            <button id="next-btn" onclick="showInvitation()">Next</button>
+        </div>
+
+        <!-- Invitation Letter Section -->
+        <div class="letter-card" id="invitation-letter" style="display:none;">
+            <h1 class="letter-title">A Special Invitation for You</h1>
+            <p class="letter-body">
+                My Love, <br><br>
+                I would be absolutely delighted if you would join me for a special day together. Let's make more beautiful memories, share some laughs, and enjoy each other's company. <br><br>
+                I’ve planned something amazing, and it would mean the world to me if you could say “yes.” I can’t wait to see you and make this moment unforgettable! <br><br>
+                Will you join me? <br><br>
+                With all my heart, <br>
+                [your sweetest man 😊 ]
+            </p>
+
+            <!-- YES and NO buttons -->
+            <div class="button-container">
+                <button id="yes-btn" onclick="showHeart()">YES</button>
+                <button id="no-btn" onclick="moveNoButton()">NO</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Heart Animation Element -->
+     <!-- Heart Animation Element -->
+    <div id="heart" class="heart">&#10084;</div>
+    <div id="confirmation-message" class="confirmation-message"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

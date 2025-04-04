@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fce6f5; /* Light pink background for a romantic feel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.letter-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.letter-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #d25b9d;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.letter-body {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    text-align: center; /* Centered text */
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 1.2em;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 45%;
+}
+
+button:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+#heart {
+    font-size: 200px; /* Increased size of the heart */
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: heart-animation 1.5s ease-in-out forwards;
+}
+
+@keyframes heart-animation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(3); /* Make the heart bigger */
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -100px) scale(4); /* Larger final size */
+        opacity: 0;
+    }
+}
+
+#confirmation-message {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d25b9d;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .letter-card {
+        padding: 20px 15px;
+    }
+
+    .letter-title {
+        font-size: 2.5em;
+    }
+
+    .letter-body {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 25px;
+    }
+}
+
+#confirmation-message {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    color: #f06292;
+    line-height: 1.8;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#confirmation-message .message-line {
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #ff80ab, #f06292);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+#confirmation-message {
+    opacity: 1; /* This ensures the message fades in smoothly */
+}
+
